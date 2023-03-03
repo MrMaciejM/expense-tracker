@@ -1,0 +1,58 @@
+.dashboardContainer {
+  background-color: #5e5e5e;
+  padding: 1rem;
+  margin: 10% 20%;
+  border: solid 1px lime;
+}
+.dashboardContainer Form {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.formBox {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-bottom: 1rem;
+}
+.formInputBox {
+  display: grid;
+}
+label {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+input {
+  padding: 0.3rem;
+  width: 100%;
+  outline: 1px #777 solid;
+  border: none;
+  border-radius: 5px;
+}
+Form button {
+  padding: 0.3rem 0.8rem;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+/* List Items */
+.itemsBox {
+  display: grid;
+  border: solid 1px #bd11e9;
+  margin-top: 1rem;
+}
+.itemsBox ul li {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1rem;
+  border: 1px cyan solid;
+  align-items: center;
+  padding: 0.3rem 0;
+}
+.itemsBox ul li:nth-child(1) {
+  margin: 1rem 5rem;
+  /* background-color: lime; */
+}
+.itemBtn {
+  padding: 0.2rem 0.4rem;
+}
