@@ -1,9 +1,19 @@
+import { useState } from "react";
 import "./App.css";
-import Dashboard from "./Dashboard";
+
+import Form from "./components/Form";
+import DisplayItems from "./components/DisplayItems";
+
 function App() {
+  const [userInput, setUserInput] = useState();
+
+  const handleFormSubmit = (input) => {
+    setUserInput(input);
+  };
   return (
-    <div className="App">
-      <Dashboard></Dashboard>
+    <div className="appContainer">
+      <Form onFormSubmit={handleFormSubmit}></Form>
+      <DisplayItems userInput={userInput}></DisplayItems>
     </div>
   );
 }
