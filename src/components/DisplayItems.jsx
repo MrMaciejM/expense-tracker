@@ -1,28 +1,7 @@
 import "./DisplayItems.css" 
 
 
-function DisplayItems(props) {
-
-    let array = [];
-    let checkStorage = JSON.parse(localStorage.getItem("items"));
-    //check if localStorage exists 
-    if(checkStorage == null) {
-        localStorage.setItem("items", JSON.stringify([])); 
-    }
-    
-    let getStorage = JSON.parse(localStorage.getItem("items"));  //|| [];
-
-    //console.log(getStorage); // []
-
-    function pushToLocalStorage() {
-        array = getStorage.slice(); // creates copy of getStorage 
-        if(props.userInput) {
-          array.push(props.userInput);
-        }
-        //array.push("test");  
-        console.log("Ran push to storage");
-        localStorage.setItem("items", JSON.stringify(array)); 
-    }
+function DisplayItems(props) {  
 
     return (
         <div>            
@@ -33,6 +12,7 @@ function DisplayItems(props) {
                     <div className="liDiv" key={index}>
                     <li>{item.item}</li>
                     <li>{item.amount}</li>
+                    <li>{item.date}</li>
                 </div>);
                 })}
             </ul>

@@ -9,10 +9,8 @@ function App() {
   const [userAmount, setUserAmount] = useState("");
   const [items, setItems] = useState([]);
 
-  const handleFormSubmit = (item, amount) => {
-    //setUserInput(item);
-    //setUserAmount(amount);
-    setItems([...items, { item, amount }]);
+  const handleFormSubmit = (item, amount, date) => {
+    setItems([...items, { item, amount, date }]);
   };
   return (
     <div className="appContainer">
