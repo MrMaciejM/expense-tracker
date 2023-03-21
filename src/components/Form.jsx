@@ -13,7 +13,7 @@ export default function Form(props) {
   let getStorage = JSON.parse(localStorage.getItem("items"));  //|| [];
   let checkStorage = JSON.parse(localStorage.getItem("items"));
 
-  //check if localStorage exists 
+  //check if localStorage exists, if not then sets it up
     if(checkStorage == null) {
         localStorage.setItem("items", JSON.stringify([])); 
     }
