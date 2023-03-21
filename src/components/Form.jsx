@@ -21,10 +21,14 @@ export default function Form(props) {
     function pushToLocalStorage() {
       array = getStorage.slice(); // creates copy of getStorage 
       if(userItem) {
-        for(let i = 0; i < array.length; i++) {
-          array.push({"id": i, userItem, userAmount, userDate});
-        }
+        console.log("user item is:");
+        console.log(userItem); 
+        array.push({userItem, userAmount, userDateFormatted})
+
+        console.log("logging...");
+        console.log(array);
       }
+      
       console.log("Ran push to storage");
       localStorage.setItem("items", JSON.stringify(array)); 
   }
