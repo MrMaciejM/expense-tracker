@@ -1,0 +1,23 @@
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1900px) {
+  form {
+    font-size: 1.2rem;
+  }
+  input {
+    padding: 0.1rem;
+    font-size: 1rem;
+  }
+  form button {
+    padding: 0.3rem;
+  }
+  .liDiv div li {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .closeBtn {
+    position: relative;
+    left: 5.5rem;
+    bottom: 6.5rem;
+  }
+}

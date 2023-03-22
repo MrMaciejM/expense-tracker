@@ -3,8 +3,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --appBackground: #281d45;
+  --itemTitle: #bbb;
+  --itemPrice: #be0505;
+  --itemDate: #bbb;
+  --itemCardBackground: #110130;
+  --formFieldsBackground: #ccc;
+}
+
 body {
-  background-color: #434343;
+  background-color: var(--appBackground);
   font-family: sans-serif;
   color: #ddd;
 }
@@ -20,36 +30,84 @@ form {
   display: grid;
   text-align: center;
   padding: 0.5rem;
-  border: 1px solid yellow;
+  /* border: 1px solid yellow; */
+  border-radius: 9px;
+  background-color: var(--itemCardBackground);
 }
+
+form label {
+  margin-top: 1rem;
+}
+form button,
+form input {
+  background-color: var(--formFieldsBackground);
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+form button:first-of-type {
+  margin-top: 3rem;
+}
+
+form button:last-of-type {
+  margin-top: 2rem;
+  background-color: #c30000;
+  color: #ddd;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
 button {
   margin-top: 1rem;
 }
 .liDiv {
-  border: solid 1px #3bd1a7;
+  /* border: solid 2px #720800; */
   margin: 0.5rem auto;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 0.8rem;
   text-align: center;
+  background-color: var(--itemCardBackground);
 }
+
+.liDiv div {
+}
+
 .liDiv div li {
   padding: 0.2rem;
+  padding-top: 0.9rem;
   /* border: solid 1px pink; */
 }
+.liDiv div:nth-child(1) {
+  color: var(--itemTitle);
+}
 .liDiv div:nth-child(2) {
-  color: yellow;
+  color: var(--itemPrice);
+}
+.liDiv div:nth-child(3) {
+  color: var(--itemDate);
 }
 .liItemName {
   /* color: lime; */
 }
 .closeBtn {
-  margin: 0.2rem 0;
-  padding: 0.1rem 0.3rem;
+  margin: 0rem 0;
+  padding: 0.15rem 0.35rem;
   font-size: 0.6rem;
   outline: none;
-  border: 2px solid orange;
+  border: 1px solid lime;
   border-radius: 3px;
   color: #fff;
+  font-weight: 600;
   background-color: #000;
   cursor: pointer;
+}
+.closeBtn {
+}
+.closeBtn:active {
+  color: red;
+}
+
+.hide {
+  display: none;
 }
