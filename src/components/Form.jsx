@@ -26,6 +26,7 @@ export default function Form(props) {
         let i = 0;
         for(i; i < array.length; i++) {
           //loops through storage and creates unique IDs
+
         }
         array.push({"id": i, userItem, userAmount, userDateFormatted})
       }
@@ -58,6 +59,15 @@ export default function Form(props) {
   function handleClearAll() {
     localStorage.setItem("items", "[]"); 
   }
+
+  function expensesTotal() {
+    let total = 0;
+    for(let i = 0; i < getStorage.length; i++) {
+      let parsedAmount = parseFloat(getStorage[i].userAmount);
+      total += parsedAmount; 
+    }
+    return total.toFixed(2);    
+  }
    
   return (
     <div>
@@ -67,7 +77,7 @@ export default function Form(props) {
       <input value={userItem} onChange={handleItemChange}  placeholder="E.g. Coffee" type={"text"} />
 
       <label>Amount</label>
-      <input value={userAmount} onChange={handleAmountChange} placeholder="2.99" />
+      <input value={userAmount} onChange={handleAmountChange} type="number" step="any" placeholder="2.99" />
 
       <label>Date</label>
       <input type={"date"} value={userDate} onChange={handleDateChange} />
@@ -75,6 +85,8 @@ export default function Form(props) {
       <button type="submit">Submit</button>
       <button type="button" onClick={handleClearAll}>Delete All</button>
     </form>
+
+    <p className="expensesTotal">Expenses Total: {expensesTotal()}</p>
     </div>
   );
 }

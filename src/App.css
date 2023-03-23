@@ -5,24 +5,29 @@
 }
 
 :root {
-  --appBackground: #250000;
-
+  --appBackground: #141414;
+  /* 250000 450000 e5e223*/
   --formFieldsBackground: #ccc;
-  --formBackground: #450000;
+  --formBackground: #2a2a2a;
 
-  --submitBtnColor: #000;
-  --submitBtnBackground: #ccc;
+  --submitBtnColor: #eee;
+  --submitBtnBackground: #08b771;
 
   --itemTitle: #bbb;
-  --itemPrice: #e5e223;
+  --itemPrice: #08b771;
+  /* #1f92f6 */
   --itemDate: #bbb;
-  --itemTitleAndDate: #ddd;
+  --itemTitleAndDate: #c2c2c2;
   --itemCountColor: #bbb;
 
-  --itemCardBackground: #450000;
+  --itemCardBackground: #2a2a2a;
 
-  --deleteBtnColor: #ccc;
-  --deleteBtnBackground: #250000;
+  --deleteBtnColor: #bbb;
+  /* #ccc */
+  --deleteBtnBackground: #474747;
+
+  --deleteAllBtn: #710000;
+  /* 900101 */
 }
 
 body {
@@ -31,18 +36,22 @@ body {
   color: #ddd;
 }
 
+h1 span {
+  color: var(--itemPrice);
+}
+
 .appContainer {
   display: grid;
   justify-content: center;
   margin-top: 10%;
-  border: 1px solid lime;
+  /* border: 1px solid lime; */
 }
 
 form {
   display: grid;
   text-align: center;
   padding: 0.5rem;
-  border: 1px solid yellow;
+  border: solid 1px #414141;
   border-radius: 9px;
   background-color: var(--formBackground);
 }
@@ -66,7 +75,7 @@ form button:first-of-type {
 
 form button:last-of-type {
   margin-top: 2rem;
-  background-color: #900101;
+  background-color: var(--deleteAllBtn);
   /* ad0101 */
   color: #ddd;
   font-weight: 500;
@@ -80,7 +89,7 @@ button {
   color: var(--itemCountColor);
 }
 .liDiv {
-  /* border: solid 1px #e5e223; */
+  border: solid 1px #414141;
   margin: 0.5rem auto;
   border-radius: 10px;
   font-size: 0.8rem;
@@ -96,7 +105,8 @@ button {
   padding-top: 0.9rem;
   /* border: solid 1px pink; */
 }
-.liDiv div:nth-child(1) {
+.liDiv div:nth-child(2),
+.liDiv div:nth-child(4) {
   color: var(--itemTitleAndDate);
 }
 .liDiv div:nth-child(3) {

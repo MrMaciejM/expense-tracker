@@ -11,9 +11,14 @@ function App() {
     setItems([...items, { item, amount, date }]);
   };
   return (
-    <div className="appContainer">
-      <Form onFormSubmit={handleFormSubmit}></Form>
-      <DisplayItems items={items} />
+    <div>
+      <h1>
+        <span>E</span>xpense <span>T</span>racker
+      </h1>
+      <div className="appContainer">
+        <Form onFormSubmit={handleFormSubmit}></Form>
+        <DisplayItems items={items} />
+      </div>
     </div>
   );
 }
