@@ -86,7 +86,7 @@ export default function Form(props) {
       <button type="button" onClick={handleClearAll}>Delete All</button>
     </form>
 
-    <p className="expensesTotal">Expenses Total: {expensesTotal()}</p>
+    <p className="expensesTotal">Expenses Total: £{expensesTotal()}</p>
     </div>
   );
 }
