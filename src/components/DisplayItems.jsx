@@ -4,7 +4,7 @@ import "./DisplayItems.css"
 function DisplayItems(props) {  
 
     let getStorage = JSON.parse(localStorage.getItem("items"));
-    console.log(getStorage); 
+    //console.log(getStorage); 
 
     // implement delete item on button click
     function deleteItemOnClick(e) {
@@ -16,8 +16,11 @@ function DisplayItems(props) {
         document.querySelector(`#item${itemId}`).classList.add("hide")
 
         getStorage.splice(itemId, 1);
-        localStorage.setItem("items", JSON.stringify(getStorage));             
+        localStorage.setItem("items", JSON.stringify(getStorage));    
+        
+        props.refreshTotal();
     }
+
     
     return (
         <div className="itemsContainer">            

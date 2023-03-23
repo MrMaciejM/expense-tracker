@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Form(props) {
   
@@ -7,6 +7,7 @@ export default function Form(props) {
   const [userAmount, setUserAmount] = useState(null); 
   const [userDate, setUserDate] = useState(null); 
   const [userDateFormatted, setUserDateFormatted] = useState(null); 
+  const [amountTotal, setAmountTotal] = useState(0); 
 
   // *** Implement local storage ***
   let array = [];
@@ -66,27 +67,40 @@ export default function Form(props) {
       let parsedAmount = parseFloat(getStorage[i].userAmount);
       total += parsedAmount; 
     }
-    return total.toFixed(2);    
+    setAmountTotal(total.toFixed(2));
+    //setAmountTotal("Yoo");
+    //return total.toFixed(2);    
   }
+
+  // testing phase only - remove later 
+  const refreshTotal = useEffect(() => {
+    let total = 0;
+    for(let i = 0; i < getStorage.length; i++) {
+      let parsedAmount = parseFloat(getStorage[i].userAmount);
+      total += parsedAmount; 
+    }
+    setAmountTotal(total.toFixed(2));
+  }, [getStorage]);
+
    
   return (
     <div>
     <form onSubmit={handleSubmit} >
 
       <label>Item</label>
-      <input value={userItem} onChange={handleItemChange}  placeholder="E.g. Coffee" type={"text"} />
+      <input value={userItem} onChange={handleItemChange}  placeholder="E.g. Coffee" type={"text"} required />
 
       <label>Amount</label>
-      <input value={userAmount} onChange={handleAmountChange} type="number" step="any" placeholder="2.99" />
+      <input value={userAmount} onChange={handleAmountChange} type="number" step="any" placeholder="2.99" required />
 
       <label>Date</label>
-      <input type={"date"} value={userDate} onChange={handleDateChange} />
+      <input type={"date"} value={userDate} onChange={handleDateChange} required />
 
       <button type="submit">Submit</button>
       <button type="button" onClick={handleClearAll}>Delete All</button>
     </form>
 
-    <p className="expensesTotal">Expenses Total: £{expensesTotal()}</p>
+    <p id="expensesTotal" className="expensesTotal" onMouseUp={expensesTotal}>Expenses Total: £{amountTotal}</p>
     </div>
   );
 }
