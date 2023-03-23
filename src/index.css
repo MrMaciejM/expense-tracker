@@ -1,23 +1,48 @@
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1900px) {
+  .appContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0 2%;
+  }
+  .itemsContainer ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   form {
     font-size: 1.2rem;
+    margin-right: 20%;
+    margin-left: 10%;
+    margin-top: 1.4rem;
   }
   input {
     padding: 0.1rem;
     font-size: 1rem;
+    margin: 0 10%;
   }
   form button {
     padding: 0.3rem;
+    margin: 0 20%;
   }
+  .itemCount {
+    text-align: left;
+    margin-left: 0.5rem;
+  }
+  ul {
+    margin: 0 10%;
+  }
+  .liDiv {
+    width: 80%;
+  }
+
   .liDiv div li {
     font-size: 1.1rem;
     font-weight: 500;
   }
   .closeBtn {
     position: relative;
-    left: 5.5rem;
-    bottom: 6.5rem;
+    left: 6.3rem;
+    bottom: 8.9rem;
   }
 }

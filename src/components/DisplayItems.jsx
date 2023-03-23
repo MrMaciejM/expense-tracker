@@ -20,11 +20,14 @@ function DisplayItems(props) {
     }
     
     return (
-        <div>            
+        <div className="itemsContainer">            
             <ul >
             {getStorage.map((item, index) => {
           
             return <div className="liDiv" id={"item" + index} key={index}>
+                <div>
+                    <li className="itemCount">{index + 1}</li>
+                </div>
                 <div>
                 <li className="liItemName">{item.userItem}</li>
                 </div>

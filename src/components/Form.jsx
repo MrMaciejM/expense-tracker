@@ -73,7 +73,7 @@ export default function Form(props) {
       <input type={"date"} value={userDate} onChange={handleDateChange} />
 
       <button type="submit">Submit</button>
-      <button type="button" onClick={handleClearAll}>Clear All</button>
+      <button type="button" onClick={handleClearAll}>Delete All</button>
     </form>
     </div>
   );

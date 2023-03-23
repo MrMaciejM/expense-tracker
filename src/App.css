@@ -5,12 +5,24 @@
 }
 
 :root {
-  --appBackground: #281d45;
-  --itemTitle: #bbb;
-  --itemPrice: #be0505;
-  --itemDate: #bbb;
-  --itemCardBackground: #110130;
+  --appBackground: #250000;
+
   --formFieldsBackground: #ccc;
+  --formBackground: #450000;
+
+  --submitBtnColor: #000;
+  --submitBtnBackground: #ccc;
+
+  --itemTitle: #bbb;
+  --itemPrice: #e5e223;
+  --itemDate: #bbb;
+  --itemTitleAndDate: #ddd;
+  --itemCountColor: #bbb;
+
+  --itemCardBackground: #450000;
+
+  --deleteBtnColor: #ccc;
+  --deleteBtnBackground: #250000;
 }
 
 body {
@@ -30,9 +42,9 @@ form {
   display: grid;
   text-align: center;
   padding: 0.5rem;
-  /* border: 1px solid yellow; */
+  border: 1px solid yellow;
   border-radius: 9px;
-  background-color: var(--itemCardBackground);
+  background-color: var(--formBackground);
 }
 
 form label {
@@ -47,22 +59,28 @@ form input {
 }
 
 form button:first-of-type {
+  color: var(--submitBtnColor);
+  background-color: var(--submitBtnBackground);
   margin-top: 3rem;
 }
 
 form button:last-of-type {
   margin-top: 2rem;
-  background-color: #c30000;
+  background-color: #900101;
+  /* ad0101 */
   color: #ddd;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1rem;
 }
 
 button {
   margin-top: 1rem;
 }
+.itemCount {
+  color: var(--itemCountColor);
+}
 .liDiv {
-  /* border: solid 2px #720800; */
+  /* border: solid 1px #e5e223; */
   margin: 0.5rem auto;
   border-radius: 10px;
   font-size: 0.8rem;
@@ -79,27 +97,28 @@ button {
   /* border: solid 1px pink; */
 }
 .liDiv div:nth-child(1) {
-  color: var(--itemTitle);
+  color: var(--itemTitleAndDate);
 }
-.liDiv div:nth-child(2) {
+.liDiv div:nth-child(3) {
   color: var(--itemPrice);
 }
 .liDiv div:nth-child(3) {
-  color: var(--itemDate);
+  /* color: var(--itemTitleAndDate); */
 }
 .liItemName {
   /* color: lime; */
 }
 .closeBtn {
   margin: 0rem 0;
-  padding: 0.15rem 0.35rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 50%;
   font-size: 0.6rem;
   outline: none;
-  border: 1px solid lime;
-  border-radius: 3px;
-  color: #fff;
-  font-weight: 600;
-  background-color: #000;
+  /* border: 1px solid lime; */
+  border: none;
+  font-weight: 800;
+  color: var(--deleteBtnColor);
+  background-color: var(--deleteBtnBackground);
   cursor: pointer;
 }
 .closeBtn {
