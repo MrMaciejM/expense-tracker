@@ -20,7 +20,6 @@ function DisplayItems(props) {
         
         props.refreshTotal();
     }
-
     
     return (
         <div className="itemsContainer">            
