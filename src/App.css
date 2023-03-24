@@ -67,12 +67,22 @@ form input {
   font-size: 1rem;
 }
 
+/* Submit button */
 form button:first-of-type {
   color: var(--submitBtnColor);
   background-color: var(--submitBtnBackground);
   margin-top: 3rem;
 }
 
+form button:first-of-type:hover {
+  cursor: pointer;
+}
+
+form button:first-of-type:active {
+  background-color: #067247;
+}
+
+/* Delete All button */
 form button:last-of-type {
   margin-top: 2rem;
   background-color: var(--deleteAllBtn);
@@ -81,7 +91,13 @@ form button:last-of-type {
   font-weight: 500;
   font-size: 1rem;
 }
-
+form button:last-of-type:hover {
+  cursor: pointer;
+  background-color: #a30101;
+}
+form button:last-of-type:active {
+  background-color: var(--deleteAllBtn);
+}
 button {
   margin-top: 1rem;
 }

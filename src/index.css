@@ -77,6 +77,18 @@
   }
 }
 
+@media screen and (max-width: 1930px) {
+  .itemsContainer ul {
+    row-gap: 2rem;
+  }
+  .liDiv {
+    width: 100%;
+  }
+  .expensesTotal {
+    font-size: 1.1rem;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .itemsContainer ul {
     display: grid;
