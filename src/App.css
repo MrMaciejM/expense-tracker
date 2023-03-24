@@ -5,10 +5,10 @@
 }
 
 :root {
-  --appBackground: #141414;
+  --appBackground: #151515;
   /* 250000 450000 e5e223*/
   --formFieldsBackground: #ccc;
-  --formBackground: #2a2a2a;
+  --formBackground: #202020;
 
   --submitBtnColor: #eee;
   --submitBtnBackground: #08b771;
@@ -20,7 +20,7 @@
   --itemTitleAndDate: #c2c2c2;
   --itemCountColor: #bbb;
 
-  --itemCardBackground: #2a2a2a;
+  --itemCardBackground: #202020;
 
   --deleteBtnColor: #bbb;
   /* #ccc */
@@ -85,6 +85,11 @@ form button:last-of-type {
 button {
   margin-top: 1rem;
 }
+
+.expensesTotal span {
+  color: var(--itemPrice);
+}
+
 .itemCount {
   color: var(--itemCountColor);
 }

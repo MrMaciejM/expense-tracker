@@ -1,6 +1,6 @@
 /* MEDIA QUERIES */
 
-@media screen and (max-width: 1930px) {
+@media screen and (max-width: 3900px) {
   h1 {
     font-size: 2.8rem;
     font-style: italic;
@@ -16,17 +16,19 @@
   .itemsContainer ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
   }
   form {
     font-size: 1.2rem;
     margin-right: 10%;
     margin-left: 20%;
     margin-top: 1.5rem;
+    padding-bottom: 2rem !important;
   }
   input {
     padding: 0.1rem;
     font-size: 1rem;
-    margin: 0 10%;
+    margin: 0 20%;
   }
   form button {
     padding: 0.3rem;
@@ -44,10 +46,10 @@
     font-size: 0.8rem !important;
   }
   ul {
-    margin: 0 10%;
+    margin: 0 25%;
   }
   .liDiv {
-    width: 80%;
+    width: 100%;
   }
 
   .liDiv div li {
@@ -56,7 +58,94 @@
   }
   .closeBtn {
     position: relative;
-    left: 6.7rem;
-    bottom: 8.9rem;
+    /* left: 6.7rem;
+    bottom: 8.9rem; */
+    left: 43%;
+    bottom: 135px;
+  }
+}
+
+@media screen and (max-width: 2200px) {
+  ul {
+    margin: 0 10%;
+  }
+  .liDiv {
+    width: 100%;
+  }
+  .expensesTotal {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .itemsContainer ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.4rem;
+    row-gap: 0.4rem;
+  }
+  ul {
+    margin: 0 5%;
+  }
+  .expensesTotal {
+    font-size: 1.1rem;
+  }
+  .closeBtn {
+    position: relative;
+    /* left: 6.7rem;
+    bottom: 8.9rem; */
+    left: 41%;
+    bottom: 135px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  form {
+    font-size: 1.2rem;
+    margin-right: -5%;
+    margin-left: 5%;
+    margin-top: 1.5rem;
+    padding-bottom: 2rem !important;
+  }
+  .itemsContainer ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    row-gap: 0.7rem;
+    margin: 2% 20%;
+  }
+  .liDiv {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .appContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 20%;
+  }
+
+  .itemsContainer ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    row-gap: 0.7rem;
+    margin: 10% 0%;
+    margin-left: 8%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .itemsContainer ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    row-gap: 0.7rem;
+    margin: 10% 0%;
+    margin-left: 8%;
+  }
+  .liDiv {
+    width: 60%;
   }
 }

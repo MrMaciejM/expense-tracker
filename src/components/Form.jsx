@@ -36,6 +36,18 @@ export default function Form(props) {
       localStorage.setItem("items", JSON.stringify(array)); 
   }
 
+  // testing phase only
+  // const refreshTotal = useEffect(() => {
+  //   let total = 0;
+  //   for(let i = 0; i < getStorage.length; i++) {
+  //     let parsedAmount = parseFloat(getStorage[i].userAmount);
+  //     total += parsedAmount; 
+  //   }
+  //   setAmountTotal(total.toFixed(2));
+  // }, [getStorage]);
+
+
+
   function handleItemChange(e) {
     setUserItem(e.target.value); 
   }
@@ -55,6 +67,7 @@ export default function Form(props) {
     event.preventDefault(); 
     props.onFormSubmit(userItem, userAmount, userDateFormatted); 
     pushToLocalStorage(); 
+    props.refreshTotal(); 
   }
 
   function handleClearAll() {
@@ -72,15 +85,7 @@ export default function Form(props) {
     //return total.toFixed(2);    
   }
 
-  // testing phase only - remove later 
-  const refreshTotal = useEffect(() => {
-    let total = 0;
-    for(let i = 0; i < getStorage.length; i++) {
-      let parsedAmount = parseFloat(getStorage[i].userAmount);
-      total += parsedAmount; 
-    }
-    setAmountTotal(total.toFixed(2));
-  }, [getStorage]);
+  
 
    
   return (
@@ -100,7 +105,7 @@ export default function Form(props) {
       <button type="button" onClick={handleClearAll}>Delete All</button>
     </form>
 
-    <p id="expensesTotal" className="expensesTotal" onMouseUp={expensesTotal}>Expenses Total: £{amountTotal}</p>
+    <p id="expensesTotal" className="expensesTotal">Expenses Total: £{amountTotal}</p>
     </div>
   );
 }

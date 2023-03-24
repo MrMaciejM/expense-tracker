@@ -20,7 +20,7 @@ function App() {
       total += parsedAmount;
     }
 
-    totalPara.textContent = "Expenses Total: £" + total.toFixed(2);
+    totalPara.textContent = `Expenses Total: £${total.toFixed(2)}`;
     console.log(total.toFixed(2));
     //return total.toFixed(2);
   }
@@ -34,7 +34,10 @@ function App() {
         <span>E</span>xpenses <span>T</span>racker
       </h1>
       <div className="appContainer">
-        <Form onFormSubmit={handleFormSubmit}></Form>
+        <Form
+          onFormSubmit={handleFormSubmit}
+          refreshTotal={refreshTotal}
+        ></Form>
         <DisplayItems items={items} refreshTotal={refreshTotal} />
       </div>
     </div>
