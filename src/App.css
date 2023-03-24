@@ -102,9 +102,6 @@ button {
   background-color: var(--itemCardBackground);
 }
 
-.liDiv div {
-}
-
 .liDiv div li {
   padding: 0.2rem;
   padding-top: 0.9rem;
@@ -117,12 +114,7 @@ button {
 .liDiv div:nth-child(3) {
   color: var(--itemPrice);
 }
-.liDiv div:nth-child(3) {
-  /* color: var(--itemTitleAndDate); */
-}
-.liItemName {
-  /* color: lime; */
-}
+
 .closeBtn {
   margin: 0rem 0;
   padding: 0.3rem 0.5rem;
@@ -136,8 +128,7 @@ button {
   background-color: var(--deleteBtnBackground);
   cursor: pointer;
 }
-.closeBtn {
-}
+
 .closeBtn:active {
   color: red;
 }

@@ -46,8 +46,6 @@ export default function Form(props) {
   //   setAmountTotal(total.toFixed(2));
   // }, [getStorage]);
 
-
-
   function handleItemChange(e) {
     setUserItem(e.target.value); 
   }
@@ -85,7 +83,10 @@ export default function Form(props) {
     //return total.toFixed(2);    
   }
 
-  
+
+   setTimeout(() => {
+      props.refreshTotal();
+   }, 1000); 
 
    
   return (

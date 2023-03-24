@@ -8,8 +8,6 @@ function App() {
   const [items, setItems] = useState([]);
 
   function refreshTotal() {
-    console.log("LOGGED!!");
-
     let getStorage = JSON.parse(localStorage.getItem("items"));
     let total = 0;
 
@@ -21,13 +19,17 @@ function App() {
     }
 
     totalPara.textContent = `Expenses Total: £${total.toFixed(2)}`;
-    console.log(total.toFixed(2));
-    //return total.toFixed(2);
   }
 
   const handleFormSubmit = (item, amount, date) => {
     setItems([...items, { item, amount, date }]);
   };
+
+  // updates the Expenses Total on load/refresh
+  setTimeout(() => {
+    refreshTotal();
+  }, 2000);
+
   return (
     <div>
       <h1>
