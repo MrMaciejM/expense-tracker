@@ -83,11 +83,6 @@ export default function Form(props) {
     //return total.toFixed(2);    
   }
 
-
-   setTimeout(() => {
-      props.refreshTotal();
-   }, 1000); 
-
    
   return (
     <div>
