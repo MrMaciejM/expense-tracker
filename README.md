@@ -6,7 +6,7 @@ I decided to go with an expense tracker because I wanted to try and build someth
 The expense tracker is suitable for desktops and mobile devices, making it useable across a wide range of devices.
 The app keeps track of the expense item's name, the amount it was purchased for, and the date of the purchase.
 
-!["An image of the expense tracker main dashboard"](/expense-tracker/src/images/expense-tracker-demo-img.png)
+![An image of the expense tracker main dashboard](/expense-tracker/src/images/expense-tracker-demo-img.png)
 
 ## Future Enhancements
 
